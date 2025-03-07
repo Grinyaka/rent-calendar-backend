@@ -1,12 +1,14 @@
 {
   "name": "rent-calendar-backend",
   "module": "index.ts",
+  "version": "0.0.1",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
   "scripts": {
-    "serve": "bun run index.ts"
+    "serve": "bun run index.ts",
+    "build": "tsc -b & bun build index.ts --outdir ./dist"
   },
   "peerDependencies": {
     "typescript": "^5.8.2"
