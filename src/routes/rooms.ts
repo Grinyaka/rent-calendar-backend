@@ -6,7 +6,6 @@ export async function createRoom(sql: SQL, name: string) {
     VALUES (${name})
     RETURNING *
   `
-  console.log(room)
   return room
 }
 

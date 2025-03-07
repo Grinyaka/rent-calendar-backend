@@ -1,8 +1,8 @@
-import type { SQL } from 'bun'
 import { createBooking, getBookings } from '../routes/bookings'
 import { createRoom, getRooms } from '../routes/rooms'
+import {SQL} from 'bun'
 
-export async function handleRequest(sql: SQL, req: Request) {
+export async function handleRequest(sql: typeof SQL, req: Request) {
   const url = new URL(req.url)
 
   const headers = {

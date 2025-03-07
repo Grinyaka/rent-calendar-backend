@@ -1,10 +1,9 @@
-import {serve} from 'bun'
 import sql from './db'
 
 import 'dotenv/config'
 import { handleRequest } from './controllers'
 
-const server = serve({
+const server = Bun.serve({
   port: process.env.PORT || 3000,
   async fetch(req) {
     return handleRequest(sql, req)
