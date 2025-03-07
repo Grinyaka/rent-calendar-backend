@@ -1,3 +1,4 @@
+console.log("Server is running on", Bun.env.NODE_ENV)
 Bun.serve({
   port: 3000,
   

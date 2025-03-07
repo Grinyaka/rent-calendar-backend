@@ -7,8 +7,9 @@
     "@types/bun": "latest"
   },
   "scripts": {
-    "serve": "bun run index.ts",
-    "build": "tsc -b & bun build index.ts --outdir ./dist"
+    "dev": "bun run src/index.ts",
+    "build": "tsc",
+    "start": "bun run dist/index.js"
   },
   "peerDependencies": {
     "typescript": "^5.8.2"
