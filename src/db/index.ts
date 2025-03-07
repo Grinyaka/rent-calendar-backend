@@ -1,6 +1,7 @@
 import {SQL} from 'bun'
+import 'dotenv/config'
 
-const sql = new SQL(Bun.env.POSTGRES_URL, {
+const sql = new SQL(process.env.POSTGRES_URL, {
   // Connection pool settings
   max: 20,
   idleTimeout: 20,
