@@ -17,10 +17,18 @@ export const createBooking = async (
   return booking
 }
 
-export async function getBookings(sql: SQL, start_date: string, end_date: string): Promise<Booking[]> {
+export const getBookings = async (
+  sql: SQL,
+  start_date: string,
+  end_date: string,
+): Promise<Booking[]> => {
   const bookings = await sql`
     SELECT * FROM bookings
     WHERE start_time >= ${start_date} AND end_time <= ${end_date}
   `
   return bookings
+}
+
+export const deleteBooking = async (sql: SQL, id: number): Promise<void> => {
+  await sql`DELETE FROM bookings WHERE id = ${id}`
 }
