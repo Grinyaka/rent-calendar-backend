@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@types/node": "^22.13.9",
+    "class-validator": "^0.14.1",
     "dotenv": "^16.4.7"
   }
 }
